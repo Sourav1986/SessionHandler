@@ -6,6 +6,6 @@ target 'SessionHandler' do
   use_frameworks!
 
   # Pods for SessionHandler
- pod 'SessionHandler', :path => '../SessionHandler'
+ #pod 'SessionHandler', :git => 'https://github.com/Sourav1986/SessionHandler.git', :tag => ‘0.0.1’
 
 end

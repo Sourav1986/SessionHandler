@@ -21,14 +21,20 @@ class SessionHandler:NSObject{
     override init() {
         self.urlSession = URLSession(configuration: sessionConfigaration)
     }
-    public func callWebservice(baseUrl:URL,httpMethod:String,acceptType:String,contentType:String,httpBody:Data?,authentication:String?) throws {
+    public func callWebservice(baseUrl:URL,httpMethod:String,acceptType:String?,contentType:String?,httpBody:Data?,authentication:String?) throws {
+        
         var urlRequest = URLRequest(url: baseUrl, cachePolicy: .reloadIgnoringCacheData, timeoutInterval: 60)
         urlRequest.httpMethod = httpMethod
         if let httpAuthentication = authentication {
             urlRequest.setValue(httpAuthentication, forHTTPHeaderField: "Authorization")
         }
-        urlRequest.setValue(acceptType, forHTTPHeaderField: "Accept")
-        urlRequest.setValue(contentType, forHTTPHeaderField: "Content-Type")
+        if let accepttype = acceptType {
+            urlRequest.setValue(accepttype, forHTTPHeaderField: "Accept")
+        }
+        if let contenttype = contentType {
+            urlRequest.setValue(contenttype, forHTTPHeaderField: "Content-Type")
+        }
+        
         if let body = httpBody {
             urlRequest.httpBody = body
         }

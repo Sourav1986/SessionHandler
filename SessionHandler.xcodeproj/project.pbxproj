@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		05A966D51F1F7C6400F15787 /* SessionHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = 05A966D31F1F7C6400F15787 /* SessionHandler.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		05A966DC1F1F7CAA00F15787 /* SessionHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A966DB1F1F7CAA00F15787 /* SessionHandler.swift */; };
+		DA5A32811AD330F0AD7B551A /* Pods_SessionHandler.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B80D52A9BDBB9D7E35CC4A4 /* Pods_SessionHandler.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -16,6 +17,9 @@
 		05A966D31F1F7C6400F15787 /* SessionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SessionHandler.h; sourceTree = "<group>"; };
 		05A966D41F1F7C6400F15787 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		05A966DB1F1F7CAA00F15787 /* SessionHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionHandler.swift; sourceTree = "<group>"; };
+		0B80D52A9BDBB9D7E35CC4A4 /* Pods_SessionHandler.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SessionHandler.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		88997B83AC6082523B2762F2 /* Pods-SessionHandler.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SessionHandler.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SessionHandler/Pods-SessionHandler.debug.xcconfig"; sourceTree = "<group>"; };
+		E27B63DC2921F80EFE723275 /* Pods-SessionHandler.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SessionHandler.release.xcconfig"; path = "Pods/Target Support Files/Pods-SessionHandler/Pods-SessionHandler.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA5A32811AD330F0AD7B551A /* Pods_SessionHandler.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +39,8 @@
 			children = (
 				05A966D21F1F7C6400F15787 /* SessionHandler */,
 				05A966D11F1F7C6400F15787 /* Products */,
+				A684DD1D17D09F84DD26EEE3 /* Pods */,
+				88856B56684215F48670AE10 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,6 +62,23 @@
 			path = SessionHandler;
 			sourceTree = "<group>";
 		};
+		88856B56684215F48670AE10 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0B80D52A9BDBB9D7E35CC4A4 /* Pods_SessionHandler.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A684DD1D17D09F84DD26EEE3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88997B83AC6082523B2762F2 /* Pods-SessionHandler.debug.xcconfig */,
+				E27B63DC2921F80EFE723275 /* Pods-SessionHandler.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -73,10 +97,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 05A966D81F1F7C6400F15787 /* Build configuration list for PBXNativeTarget "SessionHandler" */;
 			buildPhases = (
+				A435A06C3B5D8E86666AB505 /* [CP] Check Pods Manifest.lock */,
 				05A966CB1F1F7C6400F15787 /* Sources */,
 				05A966CC1F1F7C6400F15787 /* Frameworks */,
 				05A966CD1F1F7C6400F15787 /* Headers */,
 				05A966CE1F1F7C6400F15787 /* Resources */,
+				B669B9FFE238C89360288071 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +156,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A435A06C3B5D8E86666AB505 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B669B9FFE238C89360288071 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SessionHandler/Pods-SessionHandler-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		05A966CB1F1F7C6400F15787 /* Sources */ = {
@@ -246,6 +305,7 @@
 		};
 		05A966D91F1F7C6400F15787 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88997B83AC6082523B2762F2 /* Pods-SessionHandler.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
@@ -268,6 +328,7 @@
 		};
 		05A966DA1F1F7C6400F15787 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E27B63DC2921F80EFE723275 /* Pods-SessionHandler.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
